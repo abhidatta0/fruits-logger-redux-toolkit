@@ -11,6 +11,14 @@ function App() {
         <AddFruit />
         <FruitList />
       </div>
+
+      {/*  Footer Navbar*/}
+      <div className='navbar fixed-bottom'>
+        <div className="container mt-3">
+          <a href="https://github.com/abhidatta0/fruits-logger-redux-toolkit"  target="_blank" without rel="noreferrer" className='btn btn-outline-dark'>Github</a>
+        </div>
+      </div>
+      
     </Provider>
   );
 }
