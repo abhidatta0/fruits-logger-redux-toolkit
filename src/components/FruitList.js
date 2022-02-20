@@ -1,10 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const FruitList = ()=>{
-    const  fruits = [
-        {name: 'Mango', count: 2},
-        {name: 'Gooseberries', count: 3},
-    ];
+    const  fruits = useSelector(state=> state.fruits.fruitList);
 
     return (
         <div>

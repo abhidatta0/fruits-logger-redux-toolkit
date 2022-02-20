@@ -1,14 +1,19 @@
 import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import {addFruit} from '../actions/fruits';
 
 const AddFruit = ()=>{
     const [fruitName, setFruitName] = useState('');
     const [fruitCount, setFruitCount] = useState(0);
     const [error, setError] = useState(null);
+    const dispatch = useDispatch();
 
     const addFruitHandler = ()=>{
         setError(null);
         if(fruitName.length > 0 && Number.isInteger(fruitCount) && fruitCount > 0){
-            console.log(fruitName, fruitCount);
+            dispatch(addFruit(fruitName, fruitCount));
+            setFruitName('');
+            setFruitCount(0);
         }
         else{
             setError('Please enter a fruit name and count should be more than 0');
