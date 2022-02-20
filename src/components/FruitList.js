@@ -9,10 +9,10 @@ const FruitList = ()=>{
     return (
         <div>
             <h1 className="display-4">Fruits</h1>
-            <ul class="list-group list-group-flush w-25">
+            <ul className="list-group list-group-flush w-25">
             {
                 fruits.map((fruit, index)=> <li className="list-group-item" key={index}>{fruit.name}{' '}
-                <span class="badge bg-info rounded-pill mr-3">{fruit.count}</span>
+                <span className="badge bg-info rounded-pill mr-3">{fruit.count}</span>
                 </li>)
             }
             {fruits.length === 0 && <p className='lead'>No fruits added yet!</p>}
